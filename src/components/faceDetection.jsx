@@ -140,7 +140,7 @@ function FaceDetection() {
     formData.append('file', blob, 'captured_image.jpg');  // 'file' is the key expected by Flask
 
     // Send the form data to the backend using axios
-    const result = await axios.post("https://c1d958060255ed0454dfbd096bf7ac38.serveo.net/upload", formData, {
+    const result = await axios.post("https://ee4b25dbf73a444f01300e254145e9a3.serveo.net/upload", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -177,8 +177,9 @@ function FaceDetection() {
   }, [captureAndSend, isCapturing]);
 
   return (
+  <><h1>Face Recognition</h1>
     <div>
-      <h1>Face Recognition</h1>
+      
       <Webcam
         audio={false}
         ref={webcamRef}
@@ -187,7 +188,7 @@ function FaceDetection() {
         height={240}
       />
       {uploadStatus && <p>{uploadStatus}</p>}
-    </div>
+    </div></>
   );
 }
 
