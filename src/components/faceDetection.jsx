@@ -140,7 +140,7 @@ function FaceDetection() {
     formData.append('file', blob, 'captured_image.jpg');  // 'file' is the key expected by Flask
 
     // Send the form data to the backend using axios
-    const result = await axios.post("https://ad528485c68a23f83076fd7a4c0faffb.serveo.net/upload", formData, {
+    const result = await axios.post("https://face.q-sols.com:5000/hello/upload", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
